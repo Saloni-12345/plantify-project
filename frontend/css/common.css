@@ -1,0 +1,56 @@
+.common-home{
+    padding-top: 70px;
+}
+.common{
+     padding-top: 120px;
+    padding-bottom: 20px;
+}
+.box{
+    border-radius: 8px;
+}
+.hd-common{
+    color: #4a7c59;
+}
+.form-padding{
+  padding: 10px 2px;  
+}
+
+.back-image{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    left: 0;
+
+}
+.back-image-box{
+     overflow: hidden;
+     height:400px;
+}
+.back-image-content{
+    position:relative;
+    max-width: 1200px;
+    text-align: center;
+    top:30%;
+}
+.back-image-content h1{
+    font-size: 4rem;
+    color: #3a2626;
+    font-weight: bold;
+}
+ .back-image-content p{
+    font-size: 2rem ;
+ }
+ .gallery-container{
+     border-radius: 10px;
+    background-color: #fff;
+    padding: 30px 5px 10px 5px;
+ }
+ @media (max-width:786px ){
+   .back-image-content h1{
+    font-size: 2.5rem;
+}
+ .back-image-content p{
+    font-size: 1rem ;
+ } 
+ }

@@ -1,0 +1,10 @@
+ .img-upload{
+  width:100%;
+  object-fit: cover;
+   height:300px;
+   
+}
+.box-img{
+ overflow: hidden;
+ height: 300px;
+}

@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     min-height: 100vh;
+     background: linear-gradient(135deg, #667eea 0%, #45a049 100%);
+  
+}
+/* Navbar Styles */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.4rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d5a2d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+    color: #4a7c59;
+      transform: translateY(-2px);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0px 20px;
+}
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link:hover {
+    color: #4CAF50;
+    background: rgba(9, 231, 16, 0.1);
+    transform: translateY(-2px);
+    padding-left: 7px ;
+}
+
+.nav-link i {
+    font-size: 1.1rem;
+}
+
+
+.nav-link.active {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+    padding-left:5px;
+}
+
+
+.cta-btn {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
+}
+
+/* Demo Content */
+.demo-content {
+    margin-top: 60px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+}

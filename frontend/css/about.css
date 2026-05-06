@@ -1,0 +1,60 @@
+
+.about-container {
+  padding: 20px 40px;
+  max-width: 1100px;
+  margin: 80px auto 10px auto;
+  background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+}
+.about-container-1 {
+  padding: 30px 40px;
+  max-width: 1100px;
+  margin: 20px auto 10px auto;
+  background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2e7d32;
+}
+
+.about-intro {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.about-section {
+  margin-bottom: 25px;
+}
+
+.about-section h2 {
+  color: #388e3c;
+  margin-bottom: 10px;
+}
+
+.about-section ul {
+  padding-left: 20px;
+  margin: 0px;
+}
+
+.about-section h2+p{
+    margin-top: 30px;
+}
+.about-section ul>li{
+    margin-top: 30px;
+    list-style-type: none;
+  
+}
+.about-section h6 a{
+  text-decoration: none;
+  color:#000
+}
+.about-section h6 a:hover{
+  padding-left:3px ;
+  color:rgb(11, 11, 118)
+}
