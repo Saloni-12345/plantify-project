@@ -1,124 +1,106 @@
-﻿# plantify-project
+# Plantify 🌿
 
- # Plantify 🌿
+AI-Powered Plant Disease Detection & Diagnosis System
 
-AI-powered Plant Disease Detection & Diagnosis Web Application
+## 📌 Project Overview
 
-## 📌 Overview
+Plantify is a web-based AI application that detects plant diseases using plant leaf images. Users can upload an image of a plant leaf, and the system predicts the disease along with diagnosis-related information using a Deep Learning model.
 
-Plantify is a smart agriculture web application that helps users detect plant diseases by uploading images of plant leaves. The system uses a Deep Learning model to analyze the uploaded leaf image and predict the disease along with diagnosis-related information.
-
-The project is designed to support farmers, gardeners, and plant enthusiasts by providing quick and intelligent plant health analysis through an easy-to-use web interface.
+The project is developed using **React JS** for the frontend and **Python Flask** for the backend. The disease prediction model is built using **TensorFlow** and other Python libraries.
 
 ---
 
-## 🚀 Features
+# ✨ Features
 
-* 🌱 **Plant Disease Detection**
-
-  * Upload plant leaf images
-  * AI model predicts disease from the image
-  * Provides disease diagnosis and related information
-
-* 🌦️ **Weather Forecasting Page**
-
-  * Displays weather information for selected locations
-  * Helps users understand environmental conditions affecting crops
-
-* 🖼️ **Gallery Page**
-
-  * Shows different plant images
-  * Includes plant-related information and descriptions
-
-* 👨‍💻 **About Us Page**
-
-  * Information about the project and development team
-
-* 📷 **Image Upload System**
-
-  * Upload and process leaf images securely
-
-* 🤖 **Deep Learning Integration**
-
-  * TensorFlow-based CNN model for image classification
+* 🌱 Plant Disease Detection using AI
+* 📷 Upload Leaf Images for Prediction
+* 🧠 Deep Learning-Based Disease Classification
+* 🌦️ Weather Forecasting Page
+* 🖼️ Plant Gallery with Plant Information
+* 👨‍💻 About Us Page
+* ⚡ Fast and Interactive React Frontend
+* 🔗 Flask API Integration
 
 ---
 
-## 🛠️ Technologies Used
+# 🛠️ Technologies Used
 
-### Frontend
+## Frontend
 
 * React JS
+* JavaScript
 * HTML5
 * CSS3
-* JavaScript
 
-### Backend
+## Backend
 
 * Python
 * Flask
 
-### Deep Learning & Libraries
+## Deep Learning & Python Libraries
 
 * TensorFlow
 * NumPy
 * Matplotlib
-
-### Additional Python Libraries
-
-* OS
-* UUID
 * JSON
-* Flask Utilities
+* UUID
+* OS
 
 ---
 
-## 🧠 Deep Learning Model
-
-The disease prediction system is built using a Deep Learning model trained on plant leaf datasets. TensorFlow is used for model training and prediction.
-
-The model:
-
-* Processes uploaded leaf images
-* Extracts important visual features
-* Predicts plant diseases with high accuracy
-
----
-
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```bash
-Plantify/
+src/
 │
-├── frontend/                 # React JS frontend
-│   ├── src/
-│   ├── public/
-│
-├── backend/                  # Flask backend
-│   ├── model/
-│   ├── uploads/
-│   ├── app.py
-│   ├── prediction.py
-│
-├── dataset/                  # Plant disease dataset
-├── saved_models/             # Trained model files
-├── README.md
+└── uiPlantifyProject/
+    │
+    ├── backend/
+    │   │
+    │   ├── archive/
+    │   │   └── New Plant Diseases Dataset(Augmented)/
+    │   │       ├── train/
+    │   │       ├── valid/
+    │   │       └── test/
+    │   │
+    │   └── server/
+    │       │
+    │       ├── models/                 # Trained deep learning models
+    │       ├── uploadimages/           # Uploaded leaf images
+    │       ├── app1.py                 # Flask backend server
+    │       └── plant_disease.json      # Disease information data
+    │
+    └── frontend/
+        │
+        ├── css/                        # CSS styling files
+        ├── images/                     # Static images
+        │
+        └── userModule/
+            │
+            ├── about.jsx               # About page
+            ├── disease.jsx             # Disease detection page
+            ├── gallery.jsx             # Plant gallery page
+            ├── homePage.jsx            # Home page
+            ├── mainPlantify.jsx        # Main application component
+            ├── mainUserComponent.jsx   # User component controller
+            ├── navbarPlants.jsx        # Navigation bar
+            └── weather.jsx             # Weather forecasting page
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone <your-repository-link>
-cd Plantify
+cd uiPlantifyProject
 ```
 
 ---
 
-### 2️⃣ Frontend Setup
+# 🚀 Frontend Setup
 
 ```bash
 cd frontend
@@ -134,12 +116,12 @@ http://localhost:3000
 
 ---
 
-### 3️⃣ Backend Setup
+# 🔥 Backend Setup
 
 ```bash
-cd backend
+cd backend/server
 pip install -r requirements.txt
-python app.py
+python app1.py
 ```
 
 Backend server will run on:
@@ -150,45 +132,65 @@ http://127.0.0.1:5000
 
 ---
 
-## 📸 How It Works
+# 🧠 How Disease Detection Works
 
 1. User uploads a plant leaf image
-2. Image is sent to Flask backend
-3. Deep Learning model processes the image
-4. Disease prediction is generated
-5. Result and diagnosis information are displayed on the frontend
+2. React frontend sends image to Flask backend
+3. TensorFlow model processes the image
+4. Model predicts the plant disease
+5. Prediction and diagnosis information are displayed to the user
 
 ---
 
-## 🎯 Future Improvements
+# 🌦️ Weather Forecasting Module
 
-* Real-time disease monitoring
-* Multi-language support
-* Farmer chatbot assistant
-* Mobile application support
-* Improved disease accuracy with larger datasets
+The weather module provides weather information for different locations, helping users understand environmental conditions affecting plants and crops.
 
 ---
 
-## 🤝 Contribution
+# 🖼️ Gallery Module
+
+The gallery section displays:
+
+* Different plant images
+* Plant-related details and information
+* Educational content for users
+
+---
+
+# 🎯 Future Enhancements
+
+* 📱 Mobile App Integration
+* 🌍 Multi-language Support
+* 🤖 AI Chatbot for Farmers
+* 📊 Better Disease Accuracy
+* ☁️ Cloud Deployment
+
+---
+
+# 🤝 Contribution
 
 Contributions are welcome.
-Feel free to fork the repository and submit pull requests.
+
+You can:
+
+* Fork the repository
+* Create a new branch
+* Submit a pull request
 
 ---
 
-## 📄 License
+# 📄 License
 
-This project is developed for educational and research purposes.
+This project is developed for educational and research purposes only.
 
 ---
 
-## 👩‍💻 Developed With ❤️ Using
+# 👩‍💻 Developed Using ❤️
 
 * React JS
 * Flask
 * TensorFlow
 * Python
 * Deep Learning
-* AI for Agriculture 🌾
-
+* Artificial Intelligence for Agriculture 🌾
