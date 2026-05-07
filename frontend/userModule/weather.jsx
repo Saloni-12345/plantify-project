@@ -3,7 +3,7 @@ import "../css/common.css";
 
 
 export default function Weather() {
-  const API_KEY = '95f25811ee67bca38cc6d01b4ee58d79';
+  const API_KEY = 'your weather api key';
   // By default we'll request metric units (Celsius). Change to 'imperial' for °F.
   const UNITS = 'metric';
   // ----------------------
