@@ -56,7 +56,9 @@ label = ['Apple___Apple_scab',
 # Load Disease Labels
 with open("plant_disease.json", "r") as file:
     plant_disease = json.load(file)
-
+ 
+with open("pest-disease-list.json","r") as file2:
+    plant_images = json.load(file2)
 # Create Upload Folder
 @app.route('/about/plantify-project',methods=['GET'])
 def about():
@@ -65,6 +67,17 @@ def about():
         "contact": "+911234567890",
   }),200
      
+@app.route('/gallery',methods=['GET'])
+def gallery():
+ page = request.args.get('page',default=1,type=int)
+
+ if page== 1: return jsonify(plant_images["page1"]),200
+ elif page== 2: return jsonify(plant_images["page2"]),200
+ elif page== 3: return jsonify(plant_images["page3"]),200
+ elif page== 4: return jsonify(plant_images["page4"]),200
+ else :  return jsonify({
+     "message": "No Data Found in this page"
+ }),500
 
 
 UPLOAD_FOLDER = "uploadimages"
