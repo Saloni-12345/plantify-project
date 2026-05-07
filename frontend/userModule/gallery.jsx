@@ -18,18 +18,18 @@ export default function Gallery(props) {
     let lastIndex = allData.total > startIndex + size - 1 ? startIndex + size - 1 : allData.total - 1;
 
     useEffect(() => {
-        let base_url = `https://perenual.com/api/pest-disease-list?page=${page}&key=&{apiKey}`;
+     let base_url =`http://127.0.0.1:5000/gallery?page=${page}`;
 
         const fetchData = async () => {
             try {
                 let res = await axios.get(base_url);
                 console.log(res.data);
-                let showMy = res.data.data.map((s, i) => ({
+              
+                setshow(res.data.data.map((s, i) => ({
                  id: res.data.data[i].id,
                  show: false
-                }))
-                setshow(showMy);
-                console.log(showMy)
+                })));
+              
                 setAllData(res.data)  
             } catch (err) {
                 setErr(err.message)
@@ -38,15 +38,10 @@ export default function Gallery(props) {
  fetchData();
     },[page])
        
- 
-    const setthat = (ind) => {
-      let showM = [...showMe];
-        if (showM[ind].show)
-            showM[ind].show = false;
-        else
-            showM[ind].show = true;
-        setshow(...showM)
-
+  const setthat = (id) => { 
+    setshow(prev=>prev.map(user=>
+        user.id==id?user.show?{...user, show:false}:{...user,show:true}:user
+    ));
     }
 
     return (
@@ -72,11 +67,12 @@ export default function Gallery(props) {
                                     <p className="card-text">Scientific Name : {p1.scientific_name}</p>
                                     <p style={{ marginBottom: 0 }}>Belongs To : <span className="text-secondary">{p1.host[0]}</span> </p>
                                     <hr />
-                                    {showMe[index].show ? p1.description.map((r, dex) => <div >
+                                 {showMe.length>1?showMe[index].show==true?( p1.description.map((r, dex) => <div >
                                         <h6>Q.{dex + 1}.{r.subtitle}</h6>
                                         <p><span className="text-dark fw-bolder">A.{dex + 1}.</span> {r.description}</p>
-                                    </div>) : ""}
-                                    <button onClick={() => setthat(index)}>{showMe[index].show ? "show less.." : "show more..."}</button>
+                                    </div>) ): "":""}
+                                    <a style={{color:"blue",cursor:"pointer",fontSize:"20px"}} 
+                                    onClick={()=>setthat(p1.id)}>{p1.description.length>0?showMe[index].show ? "Read less.." : "Read more...":""}</a>
                                 </div>
                             </div>
                         </div>
