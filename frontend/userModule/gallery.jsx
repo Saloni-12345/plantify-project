@@ -10,7 +10,7 @@ export default function Gallery(props) {
     const [error, setErr] = useState("");
     let [showMe, setshow] = useState([{ id: 0, show: false }]);
      let size = 30;
-
+     let apiKey = 'your perenual data api key';
     let queryParam = queryString.parse(props.location.search);
     let { page } = queryParam;
     console.log(page)
@@ -18,7 +18,7 @@ export default function Gallery(props) {
     let lastIndex = allData.total > startIndex + size - 1 ? startIndex + size - 1 : allData.total - 1;
 
     useEffect(() => {
-        let base_url = `https://perenual.com/api/pest-disease-list?page=${page}&key=sk-6d5569fae5323eee617033`;
+        let base_url = `https://perenual.com/api/pest-disease-list?page=${page}&key=&{apiKey}`;
 
         const fetchData = async () => {
             try {
