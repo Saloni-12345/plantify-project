@@ -61,8 +61,8 @@ with open("plant_disease.json", "r") as file:
 @app.route('/about/plantify-project',methods=['GET'])
 def about():
   return jsonify({
-       "email": "salonisharma002002@gmail.com",
-        "contact": "+918423370180",
+       "email": "email@gmail.com",
+        "contact": "+911234567890",
   }),200
      
 
